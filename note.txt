@@ -1,0 +1,72 @@
+https://drive.google.com/drive/folders/1epr62DQE-G45P10Ht3PR0wf9ThmzAyTn
+課程錄影檔的網址
+
+
+16->17 最大的差別在於hook
+
+v15-v16 是一個大改版
+
+React 還沒有到框架的等級，只是個函式庫
+
+01. 
+DOM 動態生成，有點類似於lazyload概念，操作會有更多的dom產生
+
+02.
+每個dom是不同的資料源，都有相對應的後台或者是平台
+
+03.
+程式碼分離平行運作，優先權排成
+
+通常只有大型網站才會用到，netflix一開始用react在前端，但是後來將其轉到後端去
+
+react native用於開發手機APP，門檻較高，因為它沒有DOM的概念
+
+SSR (Server Side Rendering)
+CSR (Client Side Rendering)
+
+SSR的讀取跟回傳更快，使用者不太需要等
+
+virtual dom、shadow dom
+在程式碼中非真實的 DOM 元素結構
+
+真實DOM：網頁上能看到的
+虛擬DOM：程式碼裡能看到的
+Reconciliation(調和一致)
+
+
+JSX 語法：在程式碼中崁入類似HTML的標記
+X：XML
+JS的擴充語言
+花括號：({})
+
+
+單向資料流：從父層元件到子層元件(從外到內)，在做除錯與最佳化的時候會比較容易
+
+宣告式與命令式是相對的
+
+
+https://github.com/eyesofkids/mfee19-react/issues/3
+https://github.com/eyesofkids/mfee19-react
+
+
+在JS撰寫時，結尾要不要放分號可以自由決定，通常都會放
+
+prettier
+
+"singleQuote": true, 是將原本輸入的雙引號改為單引號
+"trailingComma": "es5", 在物件裡面的最後一個項目加上逗號
+"semi": true, 會在程式碼的結尾加上分號
+"endOfLine": "auto", 自動帶入換行符號
+
+https://standardjs.com/readme-zhtw.html
+react課程所使用的JS輸入標準
+
+yarn build 產生出來的衣料夾，整包會丟到伺服器當作讀取應用
+如果最後要放到github上直接展示，就要加上homepage
+詳細參考：https://create-react-app.dev/docs/deployment/#step-1-add-homepage-to-packagejson 
+(GitHub Pages#)
+
+index.js裡面的 <React.StrictMode> 是一個檢查工具
+
+
+函式型元件 vs 類別型元件
