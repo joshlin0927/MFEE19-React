@@ -100,3 +100,55 @@ function name(){
 
 ---------------------------------------------------
 
+const student =[
+    {id:1, name:emma},
+    {id:2, name:ma},
+    {id:3, name:ella},
+
+]
+
+function App() {
+    return(
+        <>
+            {
+                <ul>
+                    {student.map((student, i)=>{
+                        return <li key={i}>{student.name}</li>
+                    })}
+                </ul>
+                <ul>
+                    {[<li key="0">emma</li>, <li key="1">ma</li>, <li key="2">ella</li>]}
+                </ul>
+
+                上面兩行是一樣的結果
+            }
+        </>
+    )
+}
+
+用key就可以分辨每個項目
+
+using index as a key is an anti-pattern in react
+
+---------------------------------------------------
+
+在react沒辦法直接使用 if else ，不被react接受
+只能用三元運算
+
+function App() {
+    const count = 0
+    const foo = true
+    return(
+        <>
+            
+            {/*if...簡寫法*/}
+            {/*&&前面的要轉為布林值(一般情況下)*/}
+            {/*只能在JSX與法理寫*/}
+            {!!count && `目前總數為${count}`}
+            {count > 0 && `目前總數為${count}`}
+
+            {/*if...else*/}
+            {(foo) ? console.log(1) : console.log(2)}
+        </>
+    )
+}
