@@ -1,6 +1,12 @@
 https://drive.google.com/drive/folders/1epr62DQE-G45P10Ht3PR0wf9ThmzAyTn
 課程錄影檔的網址
 
+老師的github：
+
+https://github.com/eyesofkids/mfee19-react/issues/3
+https://github.com/eyesofkids/mfee19-react
+
+---------------------------------------------------
 
 16->17 最大的差別在於hook
 
@@ -49,13 +55,6 @@ JS的擴充語言
 單向資料流：從父層元件到子層元件(從外到內)，在做除錯與最佳化的時候會比較容易
 
 宣告式與命令式是相對的
-
----------------------------------------------------
-
-老師的github：
-
-https://github.com/eyesofkids/mfee19-react/issues/3
-https://github.com/eyesofkids/mfee19-react
 
 ---------------------------------------------------
 
