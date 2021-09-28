@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import MyButton from './components/MyButton'
 
 function App() {
   const [total, setTotal] = useState(0)
@@ -11,8 +12,15 @@ function App() {
     <h1>{total}</h1>
     <button onClick={() => {setTotal(total + 1)}}>+</button>
     <button onClick={() => {setTotal(total - 1)}}>-</button>
+    <br/>
+    <img src="https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg" width="100px"/>
+    <br />
+    <MyButton />
     </>
   )
 }
 
+
 export default App
+
+

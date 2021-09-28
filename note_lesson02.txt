@@ -1,0 +1,44 @@
+在JSX裡面，所有的結構與語法都要被包在標籤裡面，舉例： <> 和 </> 之間、<span></span>之間
+
+function name(){
+    reutrn (
+        <>
+            <h1>123</h1>
+        </>
+    )
+}
+
+等於
+
+function name(){
+    reutrn (
+        <React.Fragment>
+            <h1>123</h1>
+        </React.Fragment>
+    )
+}
+
+<React.Fragment></React.Fragment>
+這個外標籤需要 import React from react 後才能使用
+
+上下兩者都不會產生多餘的div，也不會影響到CSS的樣式跟效能
+
+---------------------------------------------------
+
+const imgTag = <img src="123.jpg" />
+const inputTag = <input type="text" name="title" />
+const brTag = <br />
+const hrTag = <hr />
+
+上面四個屬於自我封閉，自我封閉是XHTML的標準
+(自我封閉要查)
+
+
+---------------------------------------------------
+在JSX裡面：
+
+自訂元件標記：一定要英文大寫開頭
+
+內建元件標記：一定要英文小寫開頭
+
+普通的html，英文大小寫並沒有任何差別
