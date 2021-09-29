@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState } from 'react' // hook
 import Logo from './logo.svg'
 import { debug, devUrl, prodUrl } from './config'
 import MyButton from './components/MyButton'
+import CounterCC from './components/CounterCC'
+import CounterFC from './components/CounterFc'
 import './App.css'
 
 const imgUrl = debug ? devUrl : prodUrl
@@ -56,19 +58,18 @@ function App() {
         -
       </button>
       <br />
-      <img
-        src="https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg"
-        width="100px"
-      />
-      <br />
 
        {/* 放在public資料夾，要用http://XXXX/ */}
        <img src={`${imgUrl}/images/17.jpg`} alt="" />
       {/* --------------------- */}
       {/* 放在src資料夾，要用import(第2行) */}
-      <img src={Logo} alt="" />
+      <img src={Logo} alt="" width="50px"/>
 
       <MyButton />
+      <h1>類別型元件</h1>
+      <CounterCC />
+      <h1>函式型元件</h1>
+      <CounterFC />
     </>
   )
 }
