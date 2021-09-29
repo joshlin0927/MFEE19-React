@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function ChildB(props) {
   const [ChildBData, setChildBData] = useState('ChildB Data')
 
-  // 
-  
+  // 在出現時就直接更動，而非透過按鈕觸發
+  useEffect(() => {
+    props.setData(ChildBData)
+  }, [ChildBData])
 
   return (
     <>
       <h2>ChildB</h2>
       <button
         onClick={() => {
-          props.setData(ChildBData)
+          props.setData('ChildB Data有更動')
         }}
       >
-        設定資料到 Parent2
+        更動ChildB
       </button>
-
     </>
   )
 }

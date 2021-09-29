@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactPropTypes } from 'react'
 
 function Child(props) {
   // 先解構出屬性名稱變數
-  const { name, text } = props
+  const { name, text, id } = props
 
   console.log(props)
 
@@ -12,9 +11,9 @@ function Child(props) {
   return (
     <>
       {/* 子女元件透過props得到父母元件傳來的資料 */}
-      <h1>{props.name}</h1>
-      <p>{props.text}</p>
-      <p>{props.id}</p>
+      <h1>{name}</h1>
+      <p>{text}</p>
+      <p>{id}</p>
     </>
   )
 }

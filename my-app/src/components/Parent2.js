@@ -5,6 +5,7 @@ import ChildC from './ChildC'
 
 function Parent2() {
   // 將資料傳送到 ChildA
+  //[得到狀態, 設定狀態] = useState(初始值)
   const [parentData, setParentData] = useState('Parent Data')
 
   // 為了要給 ChildB 設定資料到 Parent
