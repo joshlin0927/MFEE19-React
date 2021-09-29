@@ -4,6 +4,12 @@ import { debug, devUrl, prodUrl } from './config'
 import MyButton from './components/MyButton'
 import CounterCC from './components/CounterCC'
 import CounterFC from './components/CounterFc'
+import FormFC from './components/FormFc'
+import FormCC from './components/FormCC'
+import CounterFC_alter from './components/CounterFc_alter'
+import Parent from './components/Parent'
+import Counter from './components/counter'
+import Parent2 from './components/Parent2'
 import './App.css'
 
 const imgUrl = debug ? devUrl : prodUrl
@@ -58,18 +64,26 @@ function App() {
         -
       </button>
       <br />
-
-       {/* 放在public資料夾，要用http://XXXX/ */}
-       <img src={`${imgUrl}/images/17.jpg`} alt="" />
+      <br />
+      {/* 放在public資料夾，要用http://XXXX/ */}
+      <img src={`${imgUrl}/images/17.jpg`} alt="" width="150px" />
       {/* --------------------- */}
       {/* 放在src資料夾，要用import(第2行) */}
-      <img src={Logo} alt="" width="50px"/>
+      <img src={Logo} alt="" width="150px" />
 
       <MyButton />
       <h1>類別型元件</h1>
       <CounterCC />
       <h1>函式型元件</h1>
       <CounterFC />
+
+      <FormFC />
+      <FormCC />
+
+      <CounterFC_alter />
+      <Parent />
+      <Counter />
+      <Parent2 />
     </>
   )
 }

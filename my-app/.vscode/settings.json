@@ -1,0 +1,20 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0F3427",
+        "titleBar.activeBackground": "#154936",
+        "titleBar.activeForeground": "#F3FCF9"
+    },
+    
+    
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
+    "prettier.disableLanguages": ["js"],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "files.autoSave": "afterDelay",
+    "workbench.iconTheme": "vscode-icons",
+}
