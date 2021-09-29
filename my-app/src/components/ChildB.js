@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 
 function ChildB(props) {
-  const [ChildBData, setChildBData] = useState('')
+  const [ChildBData, setChildBData] = useState('ChildB Data')
+
+  // 
+  
 
   return (
     <>

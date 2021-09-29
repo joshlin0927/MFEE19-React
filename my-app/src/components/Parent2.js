@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import ChildA from './ChildA'
 import ChildB from './ChildB'
+import ChildC from './ChildC'
 
 function Parent2() {
   // 將資料傳送到 ChildA
-  const [parentData, setParentData] = useState('')
+  const [parentData, setParentData] = useState('Parent Data')
 
   // 為了要給 ChildB 設定資料到 Parent
   const [data, setData] = useState('')
@@ -15,6 +16,7 @@ function Parent2() {
       <ChildA parentData={parentData} />
       <ChildB setData={setData} />
       <p>由ChildB來的資料：{data}</p>
+      <ChildC data={data} />
     </>
   )
 }
