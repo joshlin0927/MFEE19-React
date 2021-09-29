@@ -21,7 +21,7 @@ function name(){
 <React.Fragment></React.Fragment>
 這個外標籤需要 import React from react 後才能使用
 
-上下兩者都不會產生多餘的div，也不會影響到CSS的樣式跟效能
+上下兩者都不會產生多餘的div，也不會影響到CSS的樣式跟效能，所以多加也沒關係
 
 ---------------------------------------------------
 
@@ -58,7 +58,7 @@ const hrTag = <hr />
 ---------------------------------------------------
 
 class 在 react 要用 className 代替，寫法就跟一般html一樣
-for 要用 htmlFor 代替，寫法就跟一般html一樣
+for 要用 htmlFor 代替，寫法就跟一般html一樣，表單比較常見
 
 上面兩個不改一樣可以運作，但是會跳警告
 
@@ -68,6 +68,7 @@ for 要用 htmlFor 代替，寫法就跟一般html一樣
 
 href="#" 要改成 href="#/"
 
+---------------------------------------------------
 
 function name(){
     return (
@@ -89,12 +90,17 @@ function name(){
         "4"
 
         {{a:1, b:2}}
-        純物件會讓程式產生錯誤，需要調整
+        純物件會讓程式產生錯誤，需要調整成陣列或是其他形式
 
         {() => {
             console.log(1)
         }}
-        也不會顯示
+        純函式也不會顯示
+
+         {(() => {
+            console.log(1)
+        })()}
+        立即執行函式，比較少見
     )
 }
 
@@ -114,6 +120,8 @@ function App() {
                 <ul>
                     {student.map((student, i)=>{
                         return <li key={i}>{student.name}</li>
+
+                        以流水號來當作ID是不錯的作法，也可以用函式庫生產，例如：UUID、moment(如果是個人使用的，才會比較適合)
                     })}
                 </ul>
                 <ul>
@@ -144,6 +152,7 @@ function App() {
             {/*if...簡寫法*/}
             {/*&&前面的要轉為布林值(一般情況下)*/}
             {/*只能在JSX與法理寫*/}
+            
             {!!count && `目前總數為${count}`}
             {count > 0 && `目前總數為${count}`}
 
