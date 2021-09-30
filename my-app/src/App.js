@@ -6,7 +6,7 @@ import CounterCC from './components/CounterCC'
 import CounterFC from './components/CounterFc'
 import FormFC from './components/FormFc'
 import FormCC from './components/FormCC'
-import CounterFC_alter from './components/CounterFc_alter'
+import CounterFCAlter from './components/CounterFCAlter'
 import Parent from './components/Parent'
 import Counter from './components/counter'
 import Parent2 from './components/Parent2'
@@ -80,7 +80,7 @@ function App() {
       <FormFC />
       <FormCC />
 
-      <CounterFC_alter />
+      <CounterFCAlter />
       <Parent />
       <Counter />
       <Parent2 />
