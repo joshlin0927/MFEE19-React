@@ -2,7 +2,9 @@ import React from 'react'
 import ProductItem from './ProductItem'
 
 function OrderList(props) {
-  const { products, counts, setCounts } = props
+  // counts -> 陣列
+  const { productsInOrder, setProductsInOrder } = props
+
   return (
     <>
       <div className="col-md-8 cart">
@@ -18,30 +20,30 @@ function OrderList(props) {
             </div>
           </div>
         </div>
-        {products.map((v, i) => {
+        {productsInOrder.map((v, i) => {
           return (
             <ProductItem
-              id={v.id}
+              key={v.id}
               name={v.name}
               category={v.category}
               image={v.image}
               price={v.price}
-              count={counts[i]}
+              count={v.count}
               setCount={(newCount) => {
                 //1. 先從原本的陣列拷貝出一個新陣列(在這上面處理)
-                // ex. [1,1,1]
-                const newCounts = [...counts]
+                const newProductsInOrder = [...productsInOrder]
 
                 //2. 運算處理：更新陣列中對應商品數量
                 // 更新陣列中本商品索引值，如果小於1以1來更新
-                newCounts[i] = newCount < 1 ? 1 : newCount
+                newProductsInOrder[i].count = newCount < 1 ? 1 : newCount
 
                 //3. 設定回原本的狀態
-                setCounts(newCounts)
+                setProductsInOrder(newProductsInOrder)
               }}
             />
           )
         })}
+
         <div className="back-to-shop">
           <a href="#/">←</a>
           <span className="text-muted">回到商品頁</span>
