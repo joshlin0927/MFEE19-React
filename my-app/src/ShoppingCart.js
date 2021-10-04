@@ -37,7 +37,7 @@ const initState = (array) => {
   return state
 }
 
-function App2() {
+function ShoppingCart() {
   // 多樣產品狀態：陣列
   // 陣列裡放得是各項商品的數量 -> [1,1,1]
   // 下面兩種方式均可
@@ -72,4 +72,4 @@ function App2() {
   )
 }
 
-export default App2
+export default ShoppingCart
