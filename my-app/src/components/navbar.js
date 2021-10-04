@@ -1,45 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
+import '.././menu.css'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-function navbar(){
-    return (
-    <>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+function NavBar() {
+  const [isActive, setActive] = useState('false')
+
+  const handleToggle = () => {
+    setActive(!isActive)
+  }
+  return (
+    <Router>
+      <ul>
+        <li>
+          <Link
+            to="/"
+            onClick={handleToggle}
+            className={`${isActive ? '' : 'active'}`}
+          >
+            首頁
+          </Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li>
+          <Link
+            to="/about_us"
+            onClick={handleToggle}
+            className={`${isActive ? '' : 'active'}`}
+          >
+            關於我們
+          </Link>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+        <li>
+          <Link
+            to="/product"
+            onClick={handleToggle}
+            className={`${isActive ? '' : 'active'}`}
+          >
+            產品
+          </Link>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-</>
-)
+      <Switch>
+        <Route path="/about">
+          <AboutUs />
+        </Route>
+        <Route path="/product">
+          <Product />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  )
 }
 
+function Home() {
+  return <h2>Home</h2>
+}
+
+function AboutUs() {
+  return <h2>AboutUs</h2>
+}
+
+function Product() {
+  return <h2>Product</h2>
+}
+
+export default NavBar
