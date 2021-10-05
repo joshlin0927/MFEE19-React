@@ -1,4 +1,8 @@
-#root {
+#root{
+  width: 100%;
+}
+
+.framework {
   background: #ddd;
   min-height: 100vh;
   vertical-align: middle;

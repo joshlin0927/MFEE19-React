@@ -78,15 +78,19 @@ function ShoppingCart() {
   }
 
   return (
-    <div className="card">
-      <div className="row">
-        <OrderList
-          productsInOrder={productsInOrder}
-          setProductsInOrder={setProductsInOrder}
-        />
-        <Summary productCount={productCount()} total={total()} />
+    <>
+      <div className="framework">
+        <div className="card">
+          <div className="row">
+            <OrderList
+              productsInOrder={productsInOrder}
+              setProductsInOrder={setProductsInOrder}
+            />
+            <Summary productCount={productCount()} total={total()} />
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

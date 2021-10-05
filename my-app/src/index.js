@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-// import NavBar from './components/NavBar'
+import NavBar from './components/NavBar'
 // import App from './App'
 import ShoppingCart from './ShoppingCart'
 // import App3 from './App3'
@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <NavBar /> */}
+    <NavBar />
     <ShoppingCart />
     {/* <App3 /> */}
     {/* <App4 /> */}
