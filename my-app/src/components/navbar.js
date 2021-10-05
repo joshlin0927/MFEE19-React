@@ -1,42 +1,32 @@
 import React, { useState } from 'react'
 import '.././menu.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from 'react-router-dom'
 
 function NavBar() {
   const [isActive, setActive] = useState('false')
 
-  const handleToggle = () => {
-    setActive(!isActive)
-  }
   return (
     <Router>
       <ul>
         <li>
-          <Link
-            to="/"
-            onClick={handleToggle}
-            className={`${isActive ? '' : 'active'}`}
-          >
+          <NavLink to="/home" activeClassName="active">
             首頁
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="/about_us"
-            onClick={handleToggle}
-            className={`${isActive ? '' : 'active'}`}
-          >
+          <NavLink to="/about_us" className={`${isActive ? '' : 'active'}`}>
             關於我們
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="/product"
-            onClick={handleToggle}
-            className={`${isActive ? '' : 'active'}`}
-          >
+          <NavLink to="/product" className={`${isActive ? '' : 'active'}`}>
             產品
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <Switch>
