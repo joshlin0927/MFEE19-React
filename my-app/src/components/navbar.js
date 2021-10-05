@@ -8,8 +8,6 @@ import {
 } from 'react-router-dom'
 
 function NavBar() {
-  const [isActive, setActive] = useState('false')
-
   return (
     <Router>
       <ul>
@@ -19,12 +17,12 @@ function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/about_us" className={`${isActive ? '' : 'active'}`}>
+          <NavLink to="/about_us" activeClassName="active">
             關於我們
           </NavLink>
         </li>
         <li>
-          <NavLink to="/product" className={`${isActive ? '' : 'active'}`}>
+          <NavLink to="/product" activeClassName="active">
             產品
           </NavLink>
         </li>
