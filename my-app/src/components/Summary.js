@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function Summary(props) {
   const { productCount, total } = props
-  const [selectedOption, setSelectedOption] = useState('')
+  const [selectedOption, setSelectedOption] = useState('0')
   const newTotal = total + parseInt(selectedOption)
 
   return (
@@ -25,7 +25,9 @@ function Summary(props) {
               setSelectedOption(e.target.value)
             }}
           >
-            <option value="">請選擇</option>
+            <option className="text-muted" value="0">
+              請選擇
+            </option>
             <option className="text-muted" value="200">
               郵局 $200
             </option>

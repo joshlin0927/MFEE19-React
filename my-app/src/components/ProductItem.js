@@ -10,7 +10,7 @@ import React from 'react'
 //  }
 
 function ProductItem(props) {
-  const { name, category, image, price, count, setCount } = props
+  const { id, name, category, image, price, count, setCount } = props
 
   return (
     <>
@@ -45,7 +45,15 @@ function ProductItem(props) {
             </a>
           </div>
           <div className="col">
-            ${price} <span className="close">&#10005;</span>
+            ${price}{' '}
+            <span
+              className="close"
+              onClick={() => {
+                setCount(count - count)
+              }}
+            >
+              &#10005;
+            </span>
           </div>
         </div>
       </div>
