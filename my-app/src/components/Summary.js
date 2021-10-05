@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 function Summary(props) {
   const { productCount, total } = props
   const [selectedOption, setSelectedOption] = useState('')
-  const newTotal = parseInt(total + selectedOption)
+  const newTotal = total + parseInt(selectedOption)
+
   return (
     <>
       <div className="col-md-4 summary">

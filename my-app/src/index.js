@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import NavBar from './components/NavBar'
+// import NavBar from './components/NavBar'
 // import App from './App'
-// import ShoppingCart from './ShoppingCart'
+import ShoppingCart from './ShoppingCart'
 // import App3 from './App3'
 // import App4 from './App4'
 // import App5 from './App5'
@@ -15,8 +15,8 @@ import reportWebVitals from './reportWebVitals'
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <NavBar />
-    {/* <ShoppingCart /> */}
+    {/* <NavBar /> */}
+    <ShoppingCart />
     {/* <App3 /> */}
     {/* <App4 /> */}
     {/* <App5 /> */}
