@@ -1,27 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import './index.scss'
 import NavBar from './components/NavBar'
-// import App from './App'
-import ShoppingCart from './ShoppingCart'
-// import App3 from './App3'
-// import App4 from './App4'
-// import App5 from './App5'
-// import App6 from './App6'
-// import App7 from './App7'
+// import App_React_Basic from './App_React_Basic'
+// import ShoppingCart from './ShoppingCart'
+// import App3_radiobuuton_checkbox from './App3_radiobuuton_checkbox'
+// import App4_id_useRef from './App4_id_useRef'
+// import App5_form from './App5_form'
+// import App6_form2 from './App6_form2'
+// import App7_lifeCycle from './App7_lifeCycle'
+// import App8_useEffect from './App8_useEffect'
+import App9_bootstrap from './App9_bootstrap'
 
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
     <NavBar />
-    <ShoppingCart />
-    {/* <App3 /> */}
-    {/* <App4 /> */}
+    {/* <App_React_Basic /> */}
+    {/* <ShoppingCart /> */}
+    {/* <App3_radiobuuton_checkbox /> */}
+    {/* <App4_id_useRef /> */}
     {/* <App5 /> */}
     {/* <App6 /> */}
     {/* <App7 /> */}
+    {/* <App8_useEffect /> */}
+    <App9_bootstrap />
   </React.StrictMode>,
   document.getElementById('root')
 )

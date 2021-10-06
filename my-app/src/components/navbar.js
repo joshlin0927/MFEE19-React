@@ -55,12 +55,13 @@ import '.././menu.css'
 // }
 
 function NavBar() {
+  // const
   const [isActive, setIsActive] = useState()
   const [isActive2, setIsActive2] = useState()
   const [isActive3, setIsActive3] = useState()
 
   const home = document.querySelector('#home')
-  console.log(typeof home)
+  // console.log(typeof home)
   // const changeClass = (links) => {
   //   // console.log(links.target.innerText)
 
@@ -76,7 +77,7 @@ function NavBar() {
             className={`${isActive ? 'active' : ''}`}
             onClick={() => setIsActive(!isActive)}
           >
-            首頁
+            APP
           </a>
         </li>
         <li>
