@@ -2,8 +2,8 @@ import React from 'react'
 import ProductItem from './ProductItem'
 
 function ProductList(props) {
-  const { products, searchResult } = props
-  console.log(searchResult)
+  const { products } = props
+  // console.log(products)
   return (
     <>
       <div className="table-responsive">

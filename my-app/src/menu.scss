@@ -1,9 +1,9 @@
-ul {
+ul.menu {
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
-ul li a{
+ul.menu li a{
     text-decoration: none;
     background-color: #000;
     color: #fff;
@@ -11,12 +11,12 @@ ul li a{
     font-weight: bold;
 }
 
-ul li a:hover{
+ul.menu li a:hover{
     background-color: red;
     color: #fff;
 }
 
-.active{
+.menu .active{
     background-color: red;
     color: #fff;
 }

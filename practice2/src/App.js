@@ -15,23 +15,35 @@ function App() {
   // 2. 用於網頁上經過各種處理(排序、搜尋、過濾)後的資料
   const [displayProducts, setDisplayProducts] = useState([])
 
+  // 下面四個狀態是對應到四種不同的表單元素
   const [tags, setTags] = useState([])
+
+  // radio
+
+  // 搜尋bar
   const [searchWord, setSearchWord] = useState('')
   const [sortBy, setSortBy] = useState('')
 
-  // 一開始也會載入
+  // 初始化資料
   useEffect(() => {
     setProducts(data)
     setDisplayProducts(data)
   }, [])
 
   const searchResult = () => {
-    // 1. 從陣列中抓取物件
-    // 2. 輸入的文字要與產名稱相同(產品名稱要含有輸入的文字)
-
-    // const newDisplayProducts = [...displayProducts]
-    // let result = products.includes('12')
+    const newproducts = [...products]
+    let result = []
+    if (searchWord) {
+      products.filter((product) => {
+        return product.name.includes(searchWord)
+      })
+    }
+    return result
   }
+
+  useEffect(() => {
+    searchResult()
+  }, [searchWord])
 
   return (
     <>

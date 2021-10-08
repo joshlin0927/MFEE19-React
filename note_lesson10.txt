@@ -1,0 +1,8 @@
+HOC(Higher-Order Components)
+可以重新使用元件的邏輯，也就是將一個元件轉成一個新的元件
+通常會出現在第三方團體的函式庫
+
+React Router
+
+match
+可以取得不同路徑的參數值，params

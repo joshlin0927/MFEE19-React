@@ -10,7 +10,7 @@ function SortBar(props) {
               className="form-select form-select-sm"
               aria-label=".form-select-sm example"
             >
-              <option selected>預設排序 - 以ID排序</option>
+              <option value="">預設排序 - 以ID排序</option>
               <option value="2">以價格排序-由少至多</option>
               <option value="2">以價格排序-由多至少</option>
             </select>
