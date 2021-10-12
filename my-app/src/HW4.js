@@ -6,7 +6,7 @@ function HW4() {
 
   const Add = () => {
     console.log(todo)
-    todoList.innerHTML += '<li>\ + { todo } + \</li>'
+    todoList.innerHTML += '<li>' + todo + '</li>'
   }
 
   return (
