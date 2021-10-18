@@ -5,8 +5,13 @@ function HW4() {
   const todoList = document.querySelector('#todoList')
 
   const Add = () => {
-    console.log(todo)
     todoList.innerHTML += '<li>' + todo + '</li>'
+  }
+
+  const addTodo = (e) => {
+    if (e.key === 'Enter') {
+      Add()
+    }
   }
 
   return (
@@ -16,13 +21,11 @@ function HW4() {
       </div>
       <input
         type="text"
+        onKeyPress={addTodo}
         onChange={(e) => {
           setTodo(e.target.value)
         }}
       ></input>
-      <button className="btn btn-primary" onClick={Add}>
-        submit
-      </button>
     </>
   )
 }
