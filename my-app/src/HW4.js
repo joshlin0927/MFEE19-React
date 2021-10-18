@@ -2,30 +2,27 @@ import React, { useState } from 'react'
 
 function HW4() {
   const [todo, setTodo] = useState(' ')
-  const todoList = document.querySelector('#todoList')
-
-  const Add = () => {
-    todoList.innerHTML += '<li>' + todo + '</li>'
-  }
+  const [todoList, setTodoList] = useState([])
 
   const addTodo = (e) => {
     if (e.key === 'Enter') {
-      Add()
     }
   }
 
   return (
     <>
-      <div id="todoList">
-        <ul></ul>
-      </div>
+       <h2>待辦事項：</h2>
       <input
         type="text"
+        placeholder="請輸入待辦事項"
         onKeyPress={addTodo}
         onChange={(e) => {
           setTodo(e.target.value)
         }}
       ></input>
+      <ul >
+        
+      </ul>
     </>
   )
 }

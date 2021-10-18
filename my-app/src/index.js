@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.scss'
 import NavBar from './NavBar'
 // import App_React_Basic from './App_React_Basic'
-// import HW1_ShoppingCart from './HW1_ShoppingCart'
+import HW1_ShoppingCart from './HW1_ShoppingCart'
 import HW2 from './HW2'
 import HW3 from './HW3'
 import HW4 from './HW4'
@@ -22,10 +22,10 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <NavBar /> */}
     {/* <App_React_Basic /> */}
-    {/* <HW1_ShoppingCart /> */}
     <HW2 />
     <HW3 />
     <HW4 />
+    <HW1_ShoppingCart />
     {/* <App3_radiobuuton_checkbox /> */}
     {/* <App4_id_useRef /> */}
     {/* <App5_form /> */}

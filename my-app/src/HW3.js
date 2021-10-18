@@ -20,9 +20,7 @@ function HW3() {
           setBirthday(e.target.value)
         }}
       ></input>
-      <br />
-      <br />
-      <button className="btn btn-primary" onClick={AgeJudge}>
+      <button onClick={AgeJudge}>
         submit
       </button>
       <br />

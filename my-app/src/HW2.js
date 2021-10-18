@@ -3,8 +3,6 @@ import './menu.scss'
 
 function HW2() {
   const [isActive, setIsActive] = useState()
-  const [isActive2, setIsActive2] = useState()
-  const [isActive3, setIsActive3] = useState()
 
   return (
     <>
@@ -12,8 +10,8 @@ function HW2() {
         <li>
           <a
             id="home"
-            className={`${isActive ? 'active' : ''}`}
-            onClick={() => setIsActive(!isActive)}
+            className={`${isActive == '1' ? 'active' : ''}`}
+            onClick={() => setIsActive('1')}
           >
             APP
           </a>
@@ -21,8 +19,8 @@ function HW2() {
         <li>
           <a
             id="aboutUs"
-            className={`${isActive2 ? 'active' : ''}`}
-            onClick={() => setIsActive2(!isActive2)}
+            className={`${isActive == '2' ? 'active' : ''}`}
+            onClick={() => setIsActive('2')}
           >
             關於我們
           </a>
@@ -30,8 +28,8 @@ function HW2() {
         <li>
           <a
             id="product"
-            className={`${isActive3 ? 'active' : ''}`}
-            onClick={() => setIsActive3(!isActive3)}
+            className={`${isActive == '3' ? 'active' : ''}`}
+            onClick={() => setIsActive('3')}
           >
             產品
           </a>
